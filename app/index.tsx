@@ -5,6 +5,7 @@ const movies = [
   { id: "2", title: "The Matrix", rating: 8.7 },
   { id: "3", title: "Interstellar", rating: 8.6 },
   { id: "4", title: "Parasite", rating: 8.5 },
+  { id: "5", 5: "Game Of Thrones", rating: 9.2 },
 ];
 
 export default function Index() {
@@ -37,7 +38,7 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   card: {
-    backgroundColor: "#f2f2f2",
+    backgroundColor: "#0000",
     padding: 16,
     borderRadius: 8,
     marginBottom: 12,
