@@ -1,9 +1,26 @@
-import { View, Text, StyleSheet } from "react-native";
+import { FlatList, StyleSheet, Text, View } from "react-native";
+
+const movies = [
+  { id: "1", title: "Inception", rating: 8.8 },
+  { id: "2", title: "The Matrix", rating: 8.7 },
+  { id: "3", title: "Interstellar", rating: 8.6 },
+  { id: "4", title: "Parasite", rating: 8.5 },
+];
 
 export default function Index() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Hello World</Text>
+      <Text style={styles.header}>My Movies</Text>
+      <FlatList
+        data={movies}
+        keyExtractor={(item) => item.id}
+        renderItem={({ item }) => (
+          <View style={styles.card}>
+            <Text style={styles.title}>{item.title}</Text>
+            <Text style={styles.rating}>⭐ {item.rating}</Text>
+          </View>
+        )}
+      />
     </View>
   );
 }
@@ -11,10 +28,27 @@ export default function Index() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
+    paddingTop: 60,
+    paddingHorizontal: 16,
   },
-  text: {
-    fontSize: 20,
+  header: {
+    fontSize: 24,
+    fontWeight: "bold",
+    marginBottom: 16,
+  },
+  card: {
+    backgroundColor: "#f2f2f2",
+    padding: 16,
+    borderRadius: 8,
+    marginBottom: 12,
+  },
+  title: {
+    fontSize: 18,
+    fontWeight: "600",
+  },
+  rating: {
+    fontSize: 14,
+    color: "#666",
+    marginTop: 4,
   },
 });
