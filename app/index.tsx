@@ -3,8 +3,8 @@ import {
   Image,
   StyleSheet,
   Text,
-  TouchableWithoutFeedback,
-  View,
+  TouchableOpacity,
+  View
 } from "react-native";
 
 const movies = [
@@ -28,14 +28,14 @@ export default function Index() {
       >
         Recent Movies
       </Text>
-      <TouchableWithoutFeedback onPress={() => console.log("Image Tapped")}>
+      <TouchableOpacity onPress={() => console.log("Image Tapped")}>
         <Image
           fadeDuration={1000}
           blurRadius={10}
           source={{ uri: "https://reactnative.dev/img/tiny_logo.png" }}
           style={{ width: 100, height: 100, backgroundColor: "red" }}
         />
-      </TouchableWithoutFeedback>
+      </TouchableOpacity>
       <FlatList
         data={movies}
         keyExtractor={(item) => item.id}
