@@ -1,10 +1,9 @@
 import {
   FlatList,
-  Image,
   StyleSheet,
   Text,
-  TouchableOpacity,
-  View
+  TouchableHighlight,
+  View,
 } from "react-native";
 
 const movies = [
@@ -28,14 +27,11 @@ export default function Index() {
       >
         Recent Movies
       </Text>
-      <TouchableOpacity onPress={() => console.log("Image Tapped")}>
-        <Image
-          fadeDuration={1000}
-          blurRadius={10}
-          source={{ uri: "https://reactnative.dev/img/tiny_logo.png" }}
-          style={{ width: 100, height: 100, backgroundColor: "red" }}
-        />
-      </TouchableOpacity>
+      <TouchableHighlight onPress={() => console.log("Image Tapped")}>
+        <View
+          style={{ width: 200, height: 70, backgroundColor: "dodgerblue" }}
+        ></View>
+      </TouchableHighlight>
       <FlatList
         data={movies}
         keyExtractor={(item) => item.id}
