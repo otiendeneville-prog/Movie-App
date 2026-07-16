@@ -1,4 +1,4 @@
-import { FlatList, StyleSheet, Text, View } from "react-native";
+import { FlatList, Image, StyleSheet, Text, View } from "react-native";
 
 const movies = [
   { id: "1", title: "Inception", rating: 8.8 },
@@ -11,7 +11,7 @@ const movies = [
 ];
 
 export default function Index() {
-  const handlePress = () => console.log("Text Pressed");
+  const handlePress = () => console.log("Text pressed");
   return (
     <View style={styles.container}>
       <Text
@@ -21,6 +21,12 @@ export default function Index() {
       >
         Recent Movies
       </Text>
+      <Image
+        fadeDuration={1000}
+        blurRadius={10}
+        source={{ uri: "https://reactnative.dev/img/tiny_logo.png" }}
+        style={{ width: 100, height: 100, backgroundColor: "red" }}
+      />{" "}
       <FlatList
         data={movies}
         keyExtractor={(item) => item.id}
