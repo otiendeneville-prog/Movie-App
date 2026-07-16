@@ -1,4 +1,11 @@
-import { FlatList, Image, StyleSheet, Text, View } from "react-native";
+import {
+  FlatList,
+  Image,
+  StyleSheet,
+  Text,
+  TouchableWithoutFeedback,
+  View,
+} from "react-native";
 
 const movies = [
   { id: "1", title: "Inception", rating: 8.8 },
@@ -21,12 +28,14 @@ export default function Index() {
       >
         Recent Movies
       </Text>
-      <Image
-        fadeDuration={1000}
-        blurRadius={10}
-        source={{ uri: "https://reactnative.dev/img/tiny_logo.png" }}
-        style={{ width: 100, height: 100, backgroundColor: "red" }}
-      />{" "}
+      <TouchableWithoutFeedback onPress={() => console.log("Image Tapped")}>
+        <Image
+          fadeDuration={1000}
+          blurRadius={10}
+          source={{ uri: "https://reactnative.dev/img/tiny_logo.png" }}
+          style={{ width: 100, height: 100, backgroundColor: "red" }}
+        />
+      </TouchableWithoutFeedback>
       <FlatList
         data={movies}
         keyExtractor={(item) => item.id}
