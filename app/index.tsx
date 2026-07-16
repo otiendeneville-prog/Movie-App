@@ -7,12 +7,20 @@ const movies = [
   { id: "4", title: "Parasite", rating: 8.5 },
   { id: "5", title: "Game Of Thrones", rating: 9.2 },
   { id: "6", title: "God Father", rating: 8.8 },
+  { id: "7", title: "Wanted", rating: 6.3 },
 ];
 
 export default function Index() {
+  const handlePress = () => console.log("Text Pressed");
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>My Movies</Text>
+      <Text
+        numberOfLines={1}
+        onPress={() => console.log("text clicked")}
+        style={styles.header}
+      >
+        Recent Movies
+      </Text>
       <FlatList
         data={movies}
         keyExtractor={(item) => item.id}
@@ -39,7 +47,7 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   card: {
-    backgroundColor: "#121212",
+    backgroundColor: "#fff",
     padding: 16,
     borderRadius: 8,
     marginBottom: 12,
