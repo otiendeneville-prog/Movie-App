@@ -28,7 +28,7 @@ export default function Index() {
       >
         Recent Movies
       </Text>
-      <TouchableHighlight onPress={() => alert("Button Tapped")}>
+      <TouchableHighlight onPress={() => alert("My Title,My Message")}>
         <View style={{ width: 200, height: 70, backgroundColor: "dodgerblue" }}>
           <Button
             color="orange"
