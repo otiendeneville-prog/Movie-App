@@ -1,5 +1,4 @@
 import { FlatList, StyleSheet, Text, View } from "react-native";
-// import { SafeAreaView,SafeAreaProvider } from "react-native-safe-area-context";
 
 const movies = [
   { id: "1", title: "Inception", rating: 8.8 },
@@ -8,7 +7,6 @@ const movies = [
   { id: "4", title: "Parasite", rating: 8.5 },
   { id: "5", title: "Game Of Thrones", rating: 9.2 },
   { id: "6", title: "God Father", rating: 8.8 },
-  { id: "7", title: "Wanted", rating: 6.3 },
   { id: "7", title: "Wanted", rating: 6.3 },
 ];
 
