@@ -22,6 +22,8 @@ export default function Index() {
         Recent Movies
       </Text>
       <Image
+        fadeDuration={1000}
+        blurRadius={10}
         source={{ uri: "https://reactnative.dev/img/tiny_logo.png" }}
         style={{ width: 100, height: 100, backgroundColor: "red" }}
       />{" "}
