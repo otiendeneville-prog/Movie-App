@@ -1,4 +1,5 @@
 import {
+  Button,
   FlatList,
   StyleSheet,
   Text,
@@ -28,9 +29,10 @@ export default function Index() {
         Recent Movies
       </Text>
       <TouchableHighlight onPress={() => console.log("Image Tapped")}>
-        <View
-          style={{ width: 200, height: 70, backgroundColor: "dodgerblue" }}
-        ></View>
+        <View style={{ width: 200, height: 70, backgroundColor: "dodgerblue" }}>
+          {" "}
+          <Button title="Click Me" onPress={() => console.log("Click Me!")} />
+        </View>
       </TouchableHighlight>
       <FlatList
         data={movies}
