@@ -1,17 +1,8 @@
 import { useRouter } from "expo-router";
 import { FlatList, Pressable, StyleSheet, Text, View } from "react-native";
+import { movies } from "../data";
 
-const movies = [
-  { id: "1", title: "Inception", rating: 8.8 },
-  { id: "2", title: "The Matrix", rating: 8.7 },
-  { id: "3", title: "Interstellar", rating: 8.6 },
-  { id: "4", title: "Parasite", rating: 8.5 },
-  { id: "5", title: "Game Of Thrones", rating: 9.2 },
-  { id: "6", title: "God Father", rating: 8.8 },
-  { id: "7", title: "Wanted", rating: 6.3 },
-];
-
-export default function Index() {
+export default function MovieIndex() {
   const router = useRouter();
 
   return (
