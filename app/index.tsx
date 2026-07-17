@@ -1,10 +1,5 @@
-import {
-  FlatList,
-  StyleSheet,
-  Text,
-  TouchableHighlight,
-  View,
-} from "react-native";
+import { useRouter } from "expo-router";
+import { FlatList, Pressable, StyleSheet, Text, View } from "react-native";
 
 const movies = [
   { id: "1", title: "Inception", rating: 8.8 },
@@ -17,29 +12,21 @@ const movies = [
 ];
 
 export default function Index() {
-  const handlePress = () => console.log("Text pressed");
+  const router = useRouter();
+
   return (
     <View style={styles.container}>
-      <Text
-        numberOfLines={1}
-        onPress={() => console.log("text clicked")}
-        style={styles.header}
-      >
-        Recent Movies
-      </Text>
-      <TouchableHighlight onPress={() => console.log("Image Tapped")}>
-        <View
-          style={{ width: 200, height: 70, backgroundColor: "dodgerblue" }}
-        ></View>
-      </TouchableHighlight>
+      <Text style={styles.header}>Recent Movies</Text>
       <FlatList
         data={movies}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
-          <View style={styles.card}>
-            <Text style={styles.title}>{item.title}</Text>
-            <Text style={styles.rating}>⭐ {item.rating}</Text>
-          </View>
+          <Pressable onPress={() => router.push(`/movies/${item.id}`)}>
+            <View style={styles.card}>
+              <Text style={styles.title}>{item.title}</Text>
+              <Text style={styles.rating}>⭐ {item.rating}</Text>
+            </View>
+          </Pressable>
         )}
       />
     </View>
@@ -47,29 +34,14 @@ export default function Index() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingTop: 60,
-    paddingHorizontal: 16,
-  },
-  header: {
-    fontSize: 24,
-    fontWeight: "bold",
-    marginBottom: 16,
-  },
+  container: { flex: 1, paddingTop: 60, paddingHorizontal: 16 },
+  header: { fontSize: 24, fontWeight: "bold", marginBottom: 16 },
   card: {
     backgroundColor: "#fff",
     padding: 16,
     borderRadius: 8,
     marginBottom: 12,
   },
-  title: {
-    fontSize: 18,
-    fontWeight: "600",
-  },
-  rating: {
-    fontSize: 14,
-    color: "#666",
-    marginTop: 4,
-  },
+  title: { fontSize: 18, fontWeight: "600" },
+  rating: { fontSize: 14, color: "#666", marginTop: 4 },
 });
