@@ -5,6 +5,13 @@ import { movies } from "../../data";
 export default function MovieIndex() {
   const { id } = useLocalSearchParams();
   const movie = movies.find((m) => m.id == id);
+  if (!movie) {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.text}>Movie not Found</Text>
+      </View>
+    );
+  }
 
   return (
     <View style={styles.container}>
