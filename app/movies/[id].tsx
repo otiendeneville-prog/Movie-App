@@ -15,8 +15,8 @@ export default function MovieIndex() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>{movie?.title}</Text>
-      <Text style={styles.text}>⭐ {movie?.rating}</Text>
+      <Text style={styles.text}>{movie.title}</Text>
+      <Text style={styles.text}>⭐ {movie.rating}</Text>
     </View>
   );
 }
