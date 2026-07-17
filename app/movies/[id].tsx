@@ -3,8 +3,9 @@ import { StyleSheet, Text, View } from "react-native";
 import { movies } from "../../data";
 
 export default function MovieIndex() {
-  const movie = movies.find((m) => m.id == id);
   const { id } = useLocalSearchParams();
+  const movie = movies.find((m) => m.id == id);
+
   return (
     <View style={styles.container}>
       <Text style={styles.text}>{movie?.title}</Text>
