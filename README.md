@@ -1,50 +1,39 @@
-# Welcome to your Expo app 👋
+# Movie App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A simple movie browsing app built with React Native and Expo Router, made while learning React Native fundamentals.
 
-## Get started
+## Features
 
-1. Install dependencies
+- Browse a list of movies with title and rating
+- Tap a movie to view its details on a dedicated screen
+- File-based navigation using Expo Router, including dynamic routes (`/movies/[id]`)
+- Shared data module used across screens
 
-   ```bash
-   npm install
-   ```
+## Tech stack
 
-2. Start the app
+- React Native
+- Expo / Expo Router
+- TypeScript
 
-   ```bash
-   npx expo start
-   ```
+## What I learned building this
 
-In the output, you'll find options to open the app in a
+- Setting up and structuring an Expo Router project (`app/` directory routing)
+- Passing data between screens using dynamic routes and `useLocalSearchParams`
+- Managing shared state/data across multiple files
+- Debugging real build and navigation errors (broken imports, hook ordering, misplaced logic)
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+## Getting started
 
 ```bash
-npm run reset-project
+npm install
+npx expo start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Press `a` for Android, `i` for iOS, or `w` for web.
 
-## Learn more
+## Roadmap
 
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- [ ] Pull real movie data from the TMDB API
+- [ ] Add a search bar
+- [ ] Add a favorites/watchlist feature with persistence
+- [ ] Improve UI styling and add movie posters
