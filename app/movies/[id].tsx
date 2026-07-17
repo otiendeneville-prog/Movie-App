@@ -1,11 +1,13 @@
+import { useLocalSearchParams } from "expo-router";
 import { StyleSheet, Text, View } from "react-native";
 import { movies } from "../../data";
 
 export default function MovieIndex() {
   const movie = movies.find((m) => m.id == id);
+  const { id } = useLocalSearchParams();
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Movie</Text>
+      <Text style={styles.text}>{movie?.title}</Text>
     </View>
   );
 }
