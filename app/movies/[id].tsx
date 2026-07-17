@@ -1,5 +1,5 @@
+import { useLocalSearchParams } from "expo-router";
 import { StyleSheet, Text, View } from "react-native";
-// import { useLocalSearchParams } from "expo-router";
 
 export default function MovieDetails() {
   const { id } = useLocalSearchParams();
