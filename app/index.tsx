@@ -1,10 +1,8 @@
-import { useLocalSearchParams, useRouter } from "expo-router";
+import { useRouter } from "expo-router";
 import { FlatList, Pressable, StyleSheet, Text, View } from "react-native";
 import { movies } from "../data";
 
-export default function MovieDetails() {
-  const { id } = useLocalSearchParams();
-  const movie = movies.find((m) => m.id == id);
+export default function MovieIndex() {
   const router = useRouter();
 
   return (
