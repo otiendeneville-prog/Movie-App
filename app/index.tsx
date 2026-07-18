@@ -1,6 +1,7 @@
 import { useRouter } from "expo-router";
 import { FlatList, Pressable, StyleSheet, Text, View } from "react-native";
 import { movies } from "../data";
+import "./ globals.css";
 
 export default function MovieIndex() {
   const router = useRouter();
