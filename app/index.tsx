@@ -1,21 +1,28 @@
 import { useRouter } from "expo-router";
-import { FlatList, Pressable, StyleSheet, Text, View } from "react-native";
+import { FlatList, Pressable, Text, View } from "react-native";
 import { movies } from "../data";
 
 export default function MovieIndex() {
   const router = useRouter();
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.header}>Recent Movies</Text>
+    <View className="flex-1 pt-[60px] px-4 bg-indigo-950">
+      <Text className="text-3xl font-bold mb-4 text-yellow-400">
+        Recent Movies
+      </Text>
+
       <FlatList
         data={movies}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
           <Pressable onPress={() => router.push(`/movies/${item.id}`)}>
-            <View style={styles.card}>
-              <Text style={styles.title}>{item.title}</Text>
-              <Text style={styles.rating}>⭐ {item.rating}</Text>
+            <View className="bg-white-500 p-4 rounded-lg mb-3 shadow-sm border-2 border-emerald-400">
+              <Text className="text-lg font-semibold text-white">
+                {item.title}
+              </Text>
+              <Text className="text-sm text-emerald-100 mt-1">
+                ⭐ {item.rating}
+              </Text>
             </View>
           </Pressable>
         )}
@@ -23,16 +30,3 @@ export default function MovieIndex() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: { flex: 1, paddingTop: 60, paddingHorizontal: 16 },
-  header: { fontSize: 24, fontWeight: "bold", marginBottom: 16 },
-  card: {
-    backgroundColor: "#fff",
-    padding: 16,
-    borderRadius: 8,
-    marginBottom: 12,
-  },
-  title: { fontSize: 18, fontWeight: "600" },
-  rating: { fontSize: 14, color: "#666", marginTop: 4 },
-});
