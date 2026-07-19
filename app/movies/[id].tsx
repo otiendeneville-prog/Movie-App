@@ -3,7 +3,9 @@ import { Text, View } from "react-native";
 const MovieDetails = () => {
   return (
     <View>
-      <Text>[id]</Text>
+      <Text text-center justify-center bg-black p-4>
+        Welcome
+      </Text>
     </View>
   );
 };
