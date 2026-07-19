@@ -1,10 +1,44 @@
-import { Text, View } from "react-native";
+import { Tabs } from "expo-router";
 
 const index = () => {
   return (
-    <View>
-      <Text>Welcome</Text>
-    </View>
+    <Tabs>
+      <Tabs.Screen
+        name="index"
+        options={{
+          title: "Home",
+          headerShown: false,
+        }}
+      />
+      <Tabs.Screen
+        name="index"
+        options={{
+          title: "Home",
+          headerShown: false,
+        }}
+      />
+      <Tabs.Screen
+        name="profile"
+        options={{
+          title: "Profile",
+          headerShown: false,
+        }}
+      />
+      <Tabs.Screen
+        name="save"
+        options={{
+          title: "Save",
+          headerShown: false,
+        }}
+      />
+      <Tabs.Screen
+        name="serch"
+        options={{
+          title: "Serch",
+          headerShown: false,
+        }}
+      />
+    </Tabs>
   );
 };
 

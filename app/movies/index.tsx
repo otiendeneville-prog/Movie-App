@@ -1,11 +1,11 @@
 import { Text, View } from "react-native";
 
-const serch = () => {
+const index = () => {
   return (
     <View>
-      <Text>serch</Text>
+      <Text>Movies</Text>
     </View>
   );
 };
 
-export default serch;
+export default index;
