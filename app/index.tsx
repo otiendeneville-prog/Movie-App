@@ -27,6 +27,7 @@ export default function MovieIndex() {
           </Pressable>
         )}
       />
+      <link href="onbording.tsx">Onbording</link>
     </View>
   );
 }
