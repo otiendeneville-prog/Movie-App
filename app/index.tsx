@@ -7,7 +7,7 @@ export default function MovieIndex() {
 
   return (
     <View className="flex-1 pt-[60px] px-4 bg-blue-950">
-      <Text className="text-5xl font-bold mb-4 text-yellow-400">
+      <Text className="text-5xl font-bold mb-4 text-primary w-400">
         Recent Movies
       </Text>
 
