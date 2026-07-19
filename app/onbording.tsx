@@ -1,5 +1,4 @@
 import { Text, View } from "react-native";
-
 const onbording = () => {
   return (
     <View>

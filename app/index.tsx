@@ -1,7 +1,6 @@
-import { useRouter } from "expo-router";
+import { Link, useRouter } from "expo-router";
 import { FlatList, Pressable, Text, View } from "react-native";
 import { movies } from "../data";
-
 export default function MovieIndex() {
   const router = useRouter();
 
@@ -27,7 +26,7 @@ export default function MovieIndex() {
           </Pressable>
         )}
       />
-      <link href="onbording.tsx">Onbording</link>
+      <Link href="/onbording">Onbording</Link>
     </View>
   );
 }
