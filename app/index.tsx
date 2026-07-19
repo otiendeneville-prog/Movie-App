@@ -6,8 +6,8 @@ export default function MovieIndex() {
   const router = useRouter();
 
   return (
-    <View className="flex-1 pt-[60px] px-4 bg-indigo-950">
-      <Text className="text-3xl font-bold mb-4 text-yellow-400">
+    <View className="flex-1 pt-[60px] px-4 bg-blue-950">
+      <Text className="text-5xl font-bold mb-4 text-yellow-400">
         Recent Movies
       </Text>
 
@@ -16,7 +16,7 @@ export default function MovieIndex() {
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
           <Pressable onPress={() => router.push(`/movies/${item.id}`)}>
-            <View className="bg-white-500 p-4 rounded-lg mb-3 shadow-sm border-2 border-emerald-400">
+            <View className="bg-black-500 p-4 rounded-lg mb-3 shadow-sm border-2 border-emerald-400">
               <Text className="text-lg font-semibold text-white">
                 {item.title}
               </Text>
