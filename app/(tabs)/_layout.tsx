@@ -1,11 +1,42 @@
-import { Text, View } from "react-native";
-
-const layout = () => {
+import { Tabs } from "expo-router";
+export default function Layout() {
   return (
-    <View>
-      <Text>layout</Text>
-    </View>
+    <Tabs>
+      <Tabs.Screen
+        name="home"
+        options={{
+          title: "Home",
+          headerShown: false,
+        }}
+      />
+      {/* <Tabs.Screen
+        name="index"
+        options={{
+          title: "Home",
+          headerShown: false,
+        }}
+      /> */}
+      <Tabs.Screen
+        name="profile"
+        options={{
+          title: "Profile",
+          headerShown: false,
+        }}
+      />
+      <Tabs.Screen
+        name="save"
+        options={{
+          title: "Save",
+          headerShown: false,
+        }}
+      />
+      <Tabs.Screen
+        name="serch"
+        options={{
+          title: "Serch",
+          headerShown: false,
+        }}
+      />
+    </Tabs>
   );
-};
-
-export default layout;
+}
