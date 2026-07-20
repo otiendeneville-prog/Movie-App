@@ -9,13 +9,7 @@ export default function Layout() {
           headerShown: false,
         }}
       />
-      {/* <Tabs.Screen
-        name="index"
-        options={{
-          title: "Home",
-          headerShown: false,
-        }}
-      /> */}
+
       <Tabs.Screen
         name="profile"
         options={{
