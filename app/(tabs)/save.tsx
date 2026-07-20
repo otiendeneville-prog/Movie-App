@@ -3,7 +3,7 @@ import { Text, View } from "react-native";
 const save = () => {
   return (
     <View>
-      <Text>save</Text>
+      <Text>Save</Text>
     </View>
   );
 };
