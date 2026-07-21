@@ -1,5 +1,4 @@
 import { Text, TouchableOpacity, View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
 
 const Home = () => {
   return (
@@ -9,8 +8,6 @@ const Home = () => {
           Welcome To My App
         </Text>
       </TouchableOpacity>
-
-      <SafeAreaView className="-mb-2"></SafeAreaView>
     </View>
   );
 };
