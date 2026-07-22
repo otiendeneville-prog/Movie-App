@@ -1,4 +1,5 @@
-import { Text, TouchableOpacity, View } from "react-native";
+import { ImageBackground, Text, TouchableOpacity, View } from "react-native";
+import bg from "../assets/images/bg.png";
 
 const Home = () => {
   return (
@@ -8,6 +9,7 @@ const Home = () => {
           Welcome To My App
         </Text>
       </TouchableOpacity>
+      <ImageBackground source={bg} />
     </View>
   );
 };
