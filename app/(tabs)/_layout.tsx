@@ -2,21 +2,33 @@ import { Tabs } from "expo-router";
 import { ImageBackground } from "react-native";
 import bg from "../assets/images/bg.png";
 import "../globals.css";
+
 export default function Layout() {
   return (
-    <Tabs>
+    <Tabs
+      screenOptions={{
+        headerShown: false,
+        tabBarStyle: {
+          backgroundColor: "#0F0D23",
+          borderRadius: 50,
+          marginHorizontal: 56,
+          marginBottom: 36, // Fixed: changed 'marginHeight' to 'marginBottom'
+          height: 52,
+          position: "absolute",
+          overflow: "hidden",
+          borderTopWidth: 0, // Clears the default React Navigation top border
+        },
+      }}
+    >
       <Tabs.Screen
         name="home"
         options={{
           title: "Home",
-          headerShown: false,
           tabBarIcon: ({ focused }) => (
-            <>
-              <ImageBackground
-                source={bg}
-                className="flex flex-row w-full flex-1 min-w[112px] min-h-14 mt-4 justify-center items-center rounded-full overflow-hidden"
-              />
-            </>
+            <ImageBackground
+              source={bg}
+              className="flex flex-row w-full flex-1 min-w-[112px] min-h-14 mt-4 justify-center items-center rounded-full overflow-hidden" // Fixed typo: min-w-[112px]
+            />
           ),
         }}
       />
@@ -25,21 +37,38 @@ export default function Layout() {
         name="profile"
         options={{
           title: "Profile",
-          headerShown: false,
+          tabBarIcon: ({ focused }) => (
+            <ImageBackground
+              source={bg}
+              className="flex flex-row w-full flex-1 min-w-[112px] min-h-14 mt-4 justify-center items-center rounded-full overflow-hidden"
+            />
+          ),
         }}
       />
+
       <Tabs.Screen
         name="save"
         options={{
           title: "Save",
-          headerShown: false,
+          tabBarIcon: ({ focused }) => (
+            <ImageBackground
+              source={bg}
+              className="flex flex-row w-full flex-1 min-w-[112px] min-h-14 mt-4 justify-center items-center rounded-full overflow-hidden"
+            />
+          ),
         }}
       />
+
       <Tabs.Screen
-        name="serch"
+        name="serch" // Note: You might want to rename this to "search" later
         options={{
-          title: "Serch",
-          headerShown: false,
+          title: "Search",
+          tabBarIcon: ({ focused }) => (
+            <ImageBackground
+              source={bg}
+              className="flex flex-row w-full flex-1 min-w-[112px] min-h-14 mt-4 justify-center items-center rounded-full overflow-hidden"
+            />
+          ),
         }}
       />
     </Tabs>
