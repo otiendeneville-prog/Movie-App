@@ -50,12 +50,12 @@ export default function Layout() {
         name="save"
         options={{
           title: "Save",
-          // tabBarIcon: ({ focused }) => (
-          //   // <ImageBackground
-          //   //   source={bg}
-          //   //   className="flex flex-row w-full flex-1 min-w-[112px] min-h-14 mt-4 justify-center items-center rounded-full overflow-hidden"
-          //   // />
-          // ),
+          tabBarIcon: ({ focused }) => (
+            <ImageBackground
+              source={bg}
+              className="flex flex-row w-full flex-1 min-w-[112px] min-h-14 mt-4 justify-center items-center rounded-full overflow-hidden"
+            />
+          ),
         }}
       />
 
