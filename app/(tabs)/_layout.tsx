@@ -1,6 +1,6 @@
 import { Tabs } from "expo-router";
 import { ImageBackground } from "react-native";
-import { images } from "../assets/images";
+import bg from "../assets/images/bg.png";
 import "../globals.css";
 export default function Layout() {
   return (
@@ -12,7 +12,7 @@ export default function Layout() {
           headerShown: false,
           tabBarIcon: ({ focused }) => (
             <>
-              <ImageBackground source={images.highlight}></ImageBackground>
+              <ImageBackground source={bg} />
             </>
           ),
         }}
