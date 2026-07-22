@@ -9,14 +9,14 @@ export default function Layout() {
       screenOptions={{
         headerShown: false,
         tabBarStyle: {
-          backgroundColor: "#0F0D23",
+          backgroundColor: "#FFFF",
           borderRadius: 50,
           marginHorizontal: 56,
-          marginBottom: 36, // Fixed: changed 'marginHeight' to 'marginBottom'
+          marginBottom: 36,
           height: 52,
           position: "absolute",
           overflow: "hidden",
-          borderTopWidth: 0, // Clears the default React Navigation top border
+          borderTopWidth: 0,
         },
       }}
     >
@@ -37,12 +37,12 @@ export default function Layout() {
         name="profile"
         options={{
           title: "Profile",
-          tabBarIcon: ({ focused }) => (
-            <ImageBackground
-              source={bg}
-              className="flex flex-row w-full flex-1 min-w-[112px] min-h-14 mt-4 justify-center items-center rounded-full overflow-hidden"
-            />
-          ),
+          // tabBarIcon: ({ focused }) => (
+          //   // <ImageBackground
+          //   //   source={bg}
+          //   //   className="flex flex-row w-full flex-1 min-w-[112px] min-h-14 mt-4 justify-center items-center rounded-full overflow-hidden"
+          //   // />
+          // ),
         }}
       />
 
@@ -50,25 +50,25 @@ export default function Layout() {
         name="save"
         options={{
           title: "Save",
-          tabBarIcon: ({ focused }) => (
-            <ImageBackground
-              source={bg}
-              className="flex flex-row w-full flex-1 min-w-[112px] min-h-14 mt-4 justify-center items-center rounded-full overflow-hidden"
-            />
-          ),
+          // tabBarIcon: ({ focused }) => (
+          //   // <ImageBackground
+          //   //   source={bg}
+          //   //   className="flex flex-row w-full flex-1 min-w-[112px] min-h-14 mt-4 justify-center items-center rounded-full overflow-hidden"
+          //   // />
+          // ),
         }}
       />
 
       <Tabs.Screen
-        name="serch" // Note: You might want to rename this to "search" later
+        name="serch"
         options={{
           title: "Search",
-          tabBarIcon: ({ focused }) => (
-            <ImageBackground
-              source={bg}
-              className="flex flex-row w-full flex-1 min-w-[112px] min-h-14 mt-4 justify-center items-center rounded-full overflow-hidden"
-            />
-          ),
+          // tabBarIcon: ({ focused }) => (
+          //   <ImageBackground
+          //     source={bg}
+          //     className="flex flex-row w-full flex-1 min-w-[112px] min-h-14 mt-4 justify-center items-center rounded-full overflow-hidden"
+          //   />
+          // ),
         }}
       />
     </Tabs>
