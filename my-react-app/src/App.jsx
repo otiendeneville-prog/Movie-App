@@ -1,19 +1,20 @@
-const Card = ({title}) => { 
-return(
-  <div>
-  <h1>{title}</h1>
-  </div>
-)
+import React from 'react'
+
+const Card = ({title}) => {
+  return (
+    <h2>{title}</h2>
+  )
 }
 
-const App = ({title}) => {
+const App = () => {
   return(
     <div>
-      <h1>Function Arrow Component</h1>
-      <Card  title = "Avartar"/>
-      <Card title= "Spider Man" />
-      <Card title = "Avangers" />
-
+      <h2>Functional Arrow Components</h2>
+      <Card title ="Avatar"/>
+      <Card  title ="Spider Man"/>
+      <Card title ="Avangers" />
     </div>
   )
 }
+
+export default App
