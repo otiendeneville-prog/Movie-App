@@ -1,4 +1,4 @@
-import React, { use, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Card = ({title}) => {
   const [hasLiked, setHasLiked] = useState(false);
@@ -6,17 +6,15 @@ const Card = ({title}) => {
 
   useEffect( () =>{
     console.log(`{$title has been liked :{hasliked}}`);
-  },deps[hasLiked]);
+  },[hasLiked]);
   
-  useEffect( ()=>{
-    console.log(`CARD RENDERED`)
-  },deps[]);
+ 
   return (
-    <div className='card'>
+    <div className='card' onClick={() => setCount(count+1)}>
       
-      <h2>{title}</h2>
+      <h2>{title} <br /> {count}</h2>
       <button onClick={ ()=> setHasLiked(!hasLiked)}>{hasLiked ? "❤️" : "🤍"}</button>
-      
+
       
     </div>
   )
