@@ -1,7 +1,13 @@
-import React from 'react'
+const Card = ({title}) => app {
+return(
+  <div>
+  <h1>{title}</h1>
+  </div>
+)
+}
 
-export default function App() {
-  return (
-    <div>App</div>
+const App = () => {
+  return(
+    <h1>Function Arrow Component</h1>
   )
 }
