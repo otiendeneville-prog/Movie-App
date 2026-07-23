@@ -8,7 +8,7 @@ function App() {
          <header>
           <h1>Find The <span className='text-gradient'>Movies</span> You'll Enjoy Without The Hussle</h1>
          </header>
-
+         <p>Search</p>
        </div>
     </main>
   )
